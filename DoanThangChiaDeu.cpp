@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int n, arr[1000000];
+
+int binarySearch(int arr[], int l, int r, int x) {
+  if (r >= l) {
+    int mid = l + (r - l) / 2;
+    if (arr[mid] == x)
+      return mid;
+    if (arr[mid] > x)
+      return binarySearch(arr, l, mid - 1, x);
+    return binarySearch(arr, mid + 1, r, x);
+  }
+  return -1;
+}
+
+int main()
+{
+	cin >> n;
+	for (int i = 1; i <= n; i++)
+		cin >> arr[i];
+	for (int i = 1; i <= n)
+}
